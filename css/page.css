@@ -1,8 +1,20 @@
 /* Antarctic Review Hub — page.css (E-E-A-T pages: methodology, editorial-policy, about, submit-operator, contact, privacy-and-cookies) */
 
-.page-hero { padding: 32px 0 24px; }
-.page-hero h1 { max-width: 28ch; }
-.page-hero__intro { font-size: 18px; max-width: 62ch; }
+.page-hero-banner {
+  position: relative;
+  background: url('../images/hero.jpg') center 30% / cover no-repeat, var(--navy);
+  overflow: hidden;
+}
+.page-hero-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11,18,32,0.78) 0%, rgba(11,18,32,0.62) 60%, rgba(11,18,32,0.4) 100%);
+  pointer-events: none;
+}
+.page-hero { position: relative; z-index: 1; padding: 40px 0 48px; }
+.page-hero h1 { max-width: 28ch; color: #fff; }
+.page-hero__intro { font-size: 18px; max-width: 62ch; color: rgba(255,255,255,0.88); }
 
 .worked-example {
   border: 1px solid var(--outline);

@@ -2,7 +2,7 @@
 
 .hero-banner {
   position: relative;
-  background: url('../images/hero-bg.svg') center bottom / cover no-repeat, var(--navy);
+  background: url('../images/hero.jpg') center bottom / cover no-repeat, var(--navy);
   overflow: hidden;
 }
 .hero-banner::after {
@@ -71,25 +71,30 @@
 .rating-distribution {
   display: flex;
   align-items: flex-end;
-  gap: 6px;
-  height: 80px;
-  margin: 16px 0;
+  gap: 10px;
+  height: 110px;
+  max-width: 360px;
+  margin: 32px 0 16px;
+  padding-top: 20px;
+  border-bottom: 1px solid var(--outline);
 }
 .rating-distribution__bar {
-  flex: 1;
+  width: 44px;
+  flex: 0 0 auto;
   background: var(--arctic-teal);
-  border-radius: 2px 2px 0 0;
+  border-radius: 3px 3px 0 0;
   position: relative;
   min-height: 4px;
 }
 .rating-distribution__bar span {
   position: absolute;
-  top: -18px;
+  top: -20px;
   left: 0;
   right: 0;
   text-align: center;
-  font-size: 11px;
-  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--navy);
 }
 
 /* Operator scorecard blocks */

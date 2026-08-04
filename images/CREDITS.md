@@ -1,6 +1,14 @@
 # Image credits
 
-All ship silhouettes in `images/ships/` are original vector work created for this site, drawn to a single consistent scale (linear by effective Antarctic passenger capacity) so relative ship size is directly comparable across operators. No licensed or third-party photography is used anywhere on this site.
+## hero.jpg
+Generic Antarctic tabular-iceberg seascape used as the hero background on the homepage, all ten operator pages, and the E-E-A-T pages. Contains no ship, vessel, or brand of any kind, so it makes no claim about any specific operator's fleet.
+- Source: [File:00 0444 Table iceberg, Antarctica.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:00_0444_Table_iceberg,_Antarctica.jpg)
+- Author: W. Bulach
+- License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+- Changes made: downscaled to 1600px wide and re-compressed as JPEG for web delivery. Distributed here under the same CC BY-SA 4.0 license.
+
+## Ship silhouettes
+All ship silhouettes in `images/ships/` are original vector work created for this site, drawn to a single consistent scale (linear by effective Antarctic passenger capacity) so relative ship size is directly comparable across operators. No licensed or third-party ship photography is used anywhere on this site — operators' own press-kit photos are not ours to redistribute.
 
 | File | Operator | Capacity basis |
 |---|---|---|

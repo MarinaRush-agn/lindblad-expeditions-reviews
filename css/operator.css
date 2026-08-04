@@ -2,7 +2,7 @@
 
 .operator-hero-banner {
   position: relative;
-  background: url('../images/hero-bg.svg') center bottom / cover no-repeat, var(--navy);
+  background: url('../images/hero.jpg') center bottom / cover no-repeat, var(--navy);
   overflow: hidden;
 }
 .operator-hero-banner::after {
@@ -94,10 +94,10 @@
 .spec-item__value { font-size: 16px; font-weight: 600; color: var(--navy); }
 
 /* Score factor rows */
-.factor-list { margin: 16px 0; }
+.factor-list { margin: 16px 0; max-width: 780px; }
 .factor-row {
   display: grid;
-  grid-template-columns: 140px 1fr auto;
+  grid-template-columns: 130px 1fr 50px;
   gap: 14px;
   align-items: start;
   padding: 12px 0;
