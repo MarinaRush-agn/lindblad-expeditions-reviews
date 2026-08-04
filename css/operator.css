@@ -1,15 +1,39 @@
 /* Antarctic Review Hub — operator.css (operator page template) */
 
-.operator-hero { padding: 32px 0 40px; }
+.operator-hero-banner {
+  position: relative;
+  background: url('../images/hero-bg.svg') center bottom / cover no-repeat, var(--navy);
+  overflow: hidden;
+}
+.operator-hero-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11,18,32,0.72) 0%, rgba(11,18,32,0.5) 50%, rgba(11,18,32,0.25) 100%);
+  pointer-events: none;
+}
+.operator-hero {
+  position: relative;
+  z-index: 1;
+  padding: 40px 0 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .operator-hero { flex-direction: row; align-items: center; justify-content: space-between; gap: 32px; }
+}
+.operator-hero__text { max-width: 640px; }
 .operator-hero__eyebrow {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: rgba(255,255,255,0.62);
   margin-bottom: 10px;
 }
-.operator-hero h1 { max-width: 26ch; }
+.operator-hero h1 { max-width: 26ch; color: #fff; }
+.operator-hero .page-hero__intro { color: rgba(255,255,255,0.88); }
 .operator-hero__score {
   display: inline-flex;
   align-items: baseline;
@@ -20,7 +44,7 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 32px;
-  color: var(--navy);
+  color: #fff;
 }
 .operator-hero__score-value::after {
   content: '';
@@ -29,6 +53,17 @@
   width: 40px;
   background: var(--warning-gold);
   margin-top: 4px;
+}
+.operator-hero__ship {
+  flex-shrink: 0;
+  height: 90px;
+  width: auto;
+  align-self: center;
+  filter: invert(1) brightness(1.7) drop-shadow(0 10px 24px rgba(0,0,0,0.35));
+  opacity: 0.92;
+}
+@media (min-width: 768px) {
+  .operator-hero__ship { height: 150px; }
 }
 
 /* At-a-glance spec table */

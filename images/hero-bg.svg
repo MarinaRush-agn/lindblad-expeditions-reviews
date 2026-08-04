@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="55%" stop-color="#132038"/>
+      <stop offset="100%" stop-color="#1B3A4B"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12293A"/>
+      <stop offset="100%" stop-color="#0B1220"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#BAE6FD" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#BAE6FD" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="560" fill="url(#sky)"/>
+  <ellipse cx="1080" cy="150" rx="420" ry="220" fill="url(#glow)"/>
+
+  <!-- far mountain/iceberg range -->
+  <path d="M0,340 L120,290 L220,330 L340,260 L460,320 L600,270 L760,330 L900,280 L1040,325 L1180,275 L1320,320 L1440,290 L1440,400 L0,400 Z" fill="#1E3A52" opacity="0.55"/>
+
+  <!-- mid iceberg cluster -->
+  <path d="M0,380 L90,330 L160,300 L230,345 L300,320 L340,360 L420,300 L500,350 L560,325 L640,375 L720,315 L800,360 L870,330 L940,370 L1020,320 L1100,365 L1180,335 L1260,375 L1340,340 L1440,370 L1440,430 L0,430 Z" fill="#25506B" opacity="0.75"/>
+
+  <!-- near, high-contrast icebergs -->
+  <path d="M0,430 L80,360 L150,410 L210,350 L270,420 L340,370 L400,430 L1440,430 L1440,470 L0,470 Z" fill="#0D9488" opacity="0.28"/>
+  <path d="M900,430 L980,345 L1040,400 L1110,335 L1180,410 L1250,360 L1440,430 L1440,470 L900,470 Z" fill="#0F172A" opacity="0.5"/>
+
+  <!-- waterline -->
+  <rect y="430" width="1440" height="130" fill="url(#water)"/>
+  <rect y="430" width="1440" height="3" fill="#BAE6FD" opacity="0.35"/>
+</svg>
