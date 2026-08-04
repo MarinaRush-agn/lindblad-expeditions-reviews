@@ -1,0 +1,19 @@
+{
+  "name": "lindblad-expeditions-reviews",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "puppeteer": "^25.5.0"
+  },
+  "allowScripts": {
+    "puppeteer@25.5.0": true
+  }
+}

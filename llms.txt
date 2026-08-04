@@ -1,0 +1,9 @@
+# Antarctic Review Hub
+
+An independent, scored comparison of ten Antarctic expedition cruise operators: shore time per passenger, traveller ratings, price and inclusions, and expedition depth. The scoring formula, worked examples, and what is measured versus editorial judgement are published at /methodology/.
+
+- Homepage ranking: /
+- Operator pages: /operators/{poseidon-expeditions,oceanwide-expeditions,aurora-expeditions,lindblad-expeditions,quark-expeditions,scenic,ponant,silversea,hurtigruten-hx,holland-america-line}/
+- Methodology: /methodology/
+- Editorial policy: /editorial-policy/
+- About: /about/

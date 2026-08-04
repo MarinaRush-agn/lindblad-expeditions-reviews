@@ -1,0 +1,11 @@
+_source/
+temporary screenshots/
+node_modules/
+.DS_Store
+*.docx
+*.zip
+*.skill
+.claude/
+lindblad-reviews-BUILD-SPEC.md
+settings.json
+Пример промта для клод код*.txt

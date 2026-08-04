@@ -1,0 +1,104 @@
+/* Antarctic Review Hub — operator.css (operator page template) */
+
+.operator-hero { padding: 32px 0 40px; }
+.operator-hero__eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.operator-hero h1 { max-width: 26ch; }
+.operator-hero__score {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 14px;
+}
+.operator-hero__score-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--navy);
+}
+.operator-hero__score-value::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 40px;
+  background: var(--warning-gold);
+  margin-top: 4px;
+}
+
+/* At-a-glance spec table */
+.spec-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--outline);
+  border: 1px solid var(--outline);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+@media (min-width: 640px) {
+  .spec-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.spec-item {
+  background: var(--white);
+  padding: 14px 18px;
+}
+.spec-item__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+.spec-item__value { font-size: 16px; font-weight: 600; color: var(--navy); }
+
+/* Score factor rows */
+.factor-list { margin: 16px 0; }
+.factor-row {
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  gap: 14px;
+  align-items: start;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--outline);
+  font-size: 14px;
+}
+.factor-row__name { font-weight: 600; }
+.factor-row__val { font-weight: 700; font-feature-settings: 'tnum' 1; text-align: right; }
+.factor-row__val.is-editorial { color: var(--warning-gold); }
+
+/* Fleet table reuses .data-table */
+
+/* Who it suits / does not */
+.suit-list { list-style: none; }
+.suit-list li {
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 15px;
+}
+.suit-list li svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px; }
+.suit-list--yes li svg { color: var(--arctic-teal); }
+.suit-list--no li svg { color: var(--text-muted); }
+
+/* Nearby operators links */
+.related-operators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+.related-operators a {
+  border: 1px solid var(--outline);
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.related-operators a:hover { background: var(--soft-slate); }

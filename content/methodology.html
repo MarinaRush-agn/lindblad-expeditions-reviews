@@ -1,0 +1,94 @@
+<section class="page-hero container">
+  <h1>How We Score Antarctic Expedition Operators</h1>
+  <p class="page-hero__intro">This page is the full scoring methodology behind the ranking on the homepage. Two things distinguish it from the two largest review aggregators covering this niche: it publishes a shore-time-per-passenger metric, and it discloses which parts of its score are measured and which are editorial judgement.</p>
+</section>
+
+<section class="section container">
+  <h2>The four factors</h2>
+  <div class="weight-grid">
+    <div class="weight-card">
+      <div class="weight-card__pct tabular-nums">35%</div>
+      <div class="weight-card__label">Shore time per passenger</div>
+      <div class="weight-card__note">Measured. The single biggest lever on the itinerary a traveller actually experiences, and the one factor no other Antarctic aggregator publishes.</div>
+    </div>
+    <div class="weight-card">
+      <div class="weight-card__pct tabular-nums">30%</div>
+      <div class="weight-card__label">Traveller ratings</div>
+      <div class="weight-card__note">Measured. Aggregated ranges from Cruise Critic and TripAdvisor, weighted toward the platform with the larger sample where the two disagree.</div>
+    </div>
+    <div class="weight-card">
+      <div class="weight-card__pct tabular-nums is-editorial">20%</div>
+      <div class="weight-card__label">Price &amp; inclusions</div>
+      <div class="weight-card__note">Editorial judgement. Scored by this site's editors against the published price band and what it includes.</div>
+    </div>
+    <div class="weight-card">
+      <div class="weight-card__pct tabular-nums is-editorial">15%</div>
+      <div class="weight-card__label">Expedition depth</div>
+      <div class="weight-card__note">Editorial judgement. Ice class, aircraft/submersible capability, route reach and staff specialisation.</div>
+    </div>
+  </div>
+  <p>Shore time and ratings are weighted higher because they are measured, not opinion — they carry more of the score precisely because they carry less editorial risk.</p>
+</section>
+
+<section class="section section--slate container">
+  <h2>The shore-time formula, worked</h2>
+  <p>Shore time is derived from a single public constraint: IAATO caps any shore party at 100 people. A ship's effective Antarctic capacity, divided into that limit, produces a score out of 100 — capped at 100, and set to zero for any operator that makes no landings at all.</p>
+  <div class="worked-example">
+    <div class="worked-example__formula">shore_time_score = min(100, (100 &divide; effective_antarctic_capacity) &times; 100)</div>
+    <p><strong>Lindblad Expeditions</strong>, effective capacity 133: 100 &divide; 133 &times; 100 = <strong>75.2</strong></p>
+    <p><strong>Poseidon Expeditions</strong>, effective capacity 114: 100 &divide; 114 &times; 100 = <strong>87.7</strong></p>
+  </div>
+  <p>"Effective Antarctic capacity" is not the same as a ship's total berth count. Scenic Eclipse carries 228 berths but is limited to 200 in Antarctic waters; Silversea's Silver Cloud and Silver Wind carry 254 but are limited to 240. This site uses the Antarctic-specific limit in every calculation, never the ship's total berth count, because the total berth count overstates how many people actually compete for a shore slot on any given landing day.</p>
+</section>
+
+<section class="section container">
+  <h2>The composite score, worked in full</h2>
+  <p>The four factors combine as a weighted sum. Using Poseidon Expeditions as the example:</p>
+  <div class="worked-example">
+    <div class="worked-example__formula">total = 0.35 &times; shore_time + 0.30 &times; rating_points + 0.20 &times; price_value + 0.15 &times; expedition_depth</div>
+    <p>shore_time = 87.7 &middot; rating_points = (4.75 &divide; 5) &times; 100 = 95 &middot; price_value = 75 &middot; expedition_depth = 80</p>
+    <p>total = (0.35 &times; 87.7) + (0.30 &times; 95) + (0.20 &times; 75) + (0.15 &times; 80) = 30.7 + 28.5 + 15.0 + 12.0 = <strong>86.2</strong></p>
+  </div>
+  <p>Sorting all ten operators descending on this total reproduces the ranking on the homepage exactly. The order is a consequence of the inputs, not a separate decision — change any operator's capacity, rating or price data and the order recalculates.</p>
+</section>
+
+<section class="section section--slate container">
+  <h2>What's measured and what's editorial</h2>
+  <div class="table-wrapper">
+    <table class="data-table measured-editorial-table">
+      <thead><tr><th>Factor</th><th>Basis</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Shore time per passenger</td><td>Measured &mdash; capacity data, formula above</td><td class="tabular-nums">35%</td></tr>
+        <tr><td>Traveller ratings</td><td>Measured &mdash; aggregated third-party ranges</td><td class="tabular-nums">30%</td></tr>
+        <tr><td>Price &amp; inclusions</td><td>Editorial</td><td class="tabular-nums">20%</td></tr>
+        <tr><td>Expedition depth</td><td>Editorial</td><td class="tabular-nums">15%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Price/value reasoning, per operator</h3>
+  <p>Editorial price/value scores compare the published price band against what it includes. Oceanwide scores highest (90) as the most affordable segment scored, though it omits a parka. Lindblad scores lowest among landing operators (60) given the National Geographic partnership's premium. Holland America scores 100 by this measure alone — the lowest absolute price by a wide margin — but that reflects a categorically different product with zero landings, which is why price/value is only 20% of the total rather than the deciding factor.</p>
+
+  <h3>Expedition-depth reasoning, per operator</h3>
+  <p>Ponant scores highest (95): Le Commandant Charcot is the only Polar Class 2 icebreaker in the world's tourism fleet, with unique access to the Weddell Sea and onboard science labs. Lindblad scores second (92) on full-time National Geographic naturalists and photography instructors. Poseidon scores 80 — a single ship with no helicopters or submersible caps it below multi-ship, aircraft-equipped fleets like Quark's (85) or Scenic's (80, offset by a luxury-first rather than expedition-first design).</p>
+</section>
+
+<section class="section container">
+  <h2>How traveller ratings are handled</h2>
+  <p>Ratings are aggregated from Cruise Critic and TripAdvisor as of the publication date shown at the top of the homepage. Where the two platforms disagree, this site prefers the larger sample rather than the higher number. Lindblad is the clearest example: Cruise Critic shows 4.4 across 256 reviews, Travelstride shows 4.8 across 42 &mdash; a sample six times smaller. This site uses the Cruise Critic figure and states that choice here, rather than quietly using whichever number is more flattering.</p>
+</section>
+
+<section class="section section--slate container">
+  <h2>Limitations</h2>
+  <ul class="checklist">
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Prices are published brochure ranges per berth, double occupancy, excluding flights to Ushuaia or Punta Arenas and excluding single supplement.</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Fleets and capacities change between seasons; this table is rechecked annually before the season opens.</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Ratings move over time and are refreshed on the same annual schedule.</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> No aggregate-rating structured data is published anywhere on this site until a first-party verified review base exists &mdash; see the <a href="/editorial-policy/">editorial policy</a>.</li>
+  </ul>
+</section>
+
+<section class="section container">
+  <h2>Requesting a correction</h2>
+  <p>If a figure on this site is wrong or out of date, use the corrections route on the <a href="/contact/">contact page</a>. Include the operator, the specific figure, and a source. See also how operators enter this ranking in the first place: <a href="/submit-operator/">Submit an Operator</a>.</p>
+</section>

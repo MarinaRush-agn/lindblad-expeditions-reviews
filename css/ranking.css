@@ -1,0 +1,122 @@
+/* Antarctic Review Hub — ranking.css (homepage only) */
+
+.hero {
+  padding: 40px 0 48px;
+}
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.hero h1 { margin-bottom: 16px; max-width: 22ch; }
+.hero__intro { font-size: 18px; line-height: 1.7; max-width: 62ch; margin-bottom: 28px; }
+
+.stat-plates {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 620px;
+}
+
+/* Scorecard table specifics */
+.scorecard-note {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 72ch;
+  margin-top: 16px;
+}
+.landing-style-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius);
+  background: var(--ice-blue);
+  color: var(--navy);
+  white-space: nowrap;
+}
+.rating-range { white-space: nowrap; }
+.rating-range small { color: var(--text-muted); display: block; font-size: 11px; }
+
+/* Lindblad deep section */
+.lindblad-block { }
+.rating-distribution {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 80px;
+  margin: 16px 0;
+}
+.rating-distribution__bar {
+  flex: 1;
+  background: var(--arctic-teal);
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  min-height: 4px;
+}
+.rating-distribution__bar span {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Operator scorecard blocks */
+.operator-block {
+  border-top: 1px solid var(--outline);
+  padding: 32px 0;
+}
+.operator-block__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.operator-block__rank {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.operator-fleet-line {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+/* Praise/complain category grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin: 24px 0;
+}
+@media (min-width: 768px) {
+  .category-grid { grid-template-columns: 1fr 1fr; }
+}
+.category-grid h3 { display: flex; align-items: center; gap: 8px; }
+.category-grid h3 svg { width: 22px; height: 22px; }
+.category-grid h3.praise svg { color: var(--arctic-teal); }
+.category-grid h3.complain svg { color: var(--warning-gold); }
+
+/* Shore-time score list (block 7) */
+.shore-time-list { margin: 20px 0; }
+.shore-time-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--outline);
+  font-size: 14px;
+}
+.shore-time-row .metric-bar { width: 140px; }
+.shore-time-row__val { font-weight: 600; font-feature-settings: 'tnum' 1; }
+
+/* Close block */
+.close-block { text-align: center; padding: 40px 0; }
