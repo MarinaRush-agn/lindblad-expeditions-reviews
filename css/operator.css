@@ -16,12 +16,6 @@
   position: relative;
   z-index: 1;
   padding: 40px 0 48px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-@media (min-width: 768px) {
-  .operator-hero { flex-direction: row; align-items: center; justify-content: space-between; gap: 32px; }
 }
 .operator-hero__text { max-width: 640px; }
 .operator-hero__eyebrow {
@@ -54,18 +48,6 @@
   background: var(--warning-gold);
   margin-top: 4px;
 }
-.operator-hero__ship {
-  flex-shrink: 0;
-  height: 90px;
-  width: auto;
-  align-self: center;
-  filter: invert(1) brightness(1.7) drop-shadow(0 10px 24px rgba(0,0,0,0.35));
-  opacity: 0.92;
-}
-@media (min-width: 768px) {
-  .operator-hero__ship { height: 150px; }
-}
-
 /* At-a-glance spec table */
 .spec-grid {
   display: grid;
