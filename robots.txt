@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://lindblad-expeditions-reviews.com/sitemap.xml
+Disallow: /

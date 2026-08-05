@@ -12,6 +12,13 @@ UPDATED=$(date +"%B %Y")
 BUILD_DATE_ISO=$(date +"%Y-%m-%d")
 BASE_URL="https://lindblad-expeditions-reviews.com"
 
+# Set to "false" once the site is ready to be indexed (also flip robots.txt back to Allow: /).
+NOINDEX="true"
+ROBOTS_META="index, follow"
+if [ "$NOINDEX" = "true" ]; then
+  ROBOTS_META="noindex, nofollow"
+fi
+
 TMPDIR=$(mktemp -d)
 trap 'rm -rf "$TMPDIR"' EXIT
 
@@ -55,6 +62,7 @@ assemble() {
     echo '<head>'
     echo '<meta charset="UTF-8">'
     echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
+    echo "<meta name=\"robots\" content=\"${ROBOTS_META}\">"
     echo "<title>${TITLE}</title>"
     echo "<meta name=\"description\" content=\"${DESC}\">"
     echo "<link rel=\"canonical\" href=\"${CANON}\">"
