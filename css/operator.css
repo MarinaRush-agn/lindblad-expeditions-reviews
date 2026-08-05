@@ -2,15 +2,8 @@
 
 .operator-hero-banner {
   position: relative;
-  background: url('../images/hero.jpg') center bottom / cover no-repeat, var(--navy);
+  background: linear-gradient(135deg, #0F172A 0%, #16324A 55%, #1B3A4B 100%);
   overflow: hidden;
-}
-.operator-hero-banner::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(11,18,32,0.72) 0%, rgba(11,18,32,0.5) 50%, rgba(11,18,32,0.25) 100%);
-  pointer-events: none;
 }
 .operator-hero {
   position: relative;
@@ -75,19 +68,32 @@
 }
 .spec-item__value { font-size: 16px; font-weight: 600; color: var(--navy); }
 
-/* Score factor rows */
-.factor-list { margin: 16px 0; max-width: 780px; }
+/* Score factor cards — mirrors .spec-grid above so the section fills the width with no dead space */
+.factor-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 16px 0;
+}
+@media (min-width: 700px) {
+  .factor-list { grid-template-columns: repeat(2, 1fr); }
+}
 .factor-row {
   display: grid;
-  grid-template-columns: 130px 1fr 50px;
-  gap: 14px;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "name val" "desc desc";
+  column-gap: 12px;
+  row-gap: 6px;
   align-items: start;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--outline);
+  border: 1px solid var(--outline);
+  border-radius: var(--radius);
+  padding: 14px 16px;
   font-size: 14px;
+  background: var(--white);
 }
-.factor-row__name { font-weight: 600; }
-.factor-row__val { font-weight: 700; font-feature-settings: 'tnum' 1; text-align: right; }
+.factor-row__name { grid-area: name; font-weight: 600; }
+.factor-row > span:nth-child(2) { grid-area: desc; color: var(--text-body); line-height: 1.5; }
+.factor-row__val { grid-area: val; font-weight: 700; font-feature-settings: 'tnum' 1; text-align: right; font-family: var(--font-display); font-size: 17px; }
 .factor-row__val.is-editorial { color: var(--warning-gold); }
 
 /* Fleet table reuses .data-table */

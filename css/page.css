@@ -2,15 +2,8 @@
 
 .page-hero-banner {
   position: relative;
-  background: url('../images/hero.jpg') center 30% / cover no-repeat, var(--navy);
+  background: linear-gradient(135deg, #0F172A 0%, #16324A 55%, #1B3A4B 100%);
   overflow: hidden;
-}
-.page-hero-banner::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(11,18,32,0.78) 0%, rgba(11,18,32,0.62) 60%, rgba(11,18,32,0.4) 100%);
-  pointer-events: none;
 }
 .page-hero { position: relative; z-index: 1; padding: 40px 0 48px; }
 .page-hero h1 { max-width: 28ch; color: #fff; }
