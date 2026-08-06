@@ -17,7 +17,7 @@ SITE_URL="https://marinarush-agn.github.io/lindblad-expeditions-reviews"   # sta
 # SITE_URL="https://lindblad-expeditions-reviews.com"                      # production — flip when the domain is live, rebuild, confirm canonical matches, confirm no noindex survives anywhere.
 BASE_URL="$SITE_URL"
 
-ROBOTS_META="index, follow"
+ROBOTS_META="noindex, nofollow"
 
 TMPDIR=$(mktemp -d)
 trap 'rm -rf "$TMPDIR"' EXIT

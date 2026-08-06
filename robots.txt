@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://marinarush-agn.github.io/lindblad-expeditions-reviews/sitemap.xml
+Disallow: /
