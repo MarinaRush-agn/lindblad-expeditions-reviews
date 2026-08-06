@@ -7,5 +7,6 @@ node_modules/
 *.skill
 .claude/
 lindblad-reviews-BUILD-SPEC.md
+lindblad-reviews-BUILD-SPEC-v2.md
 settings.json
 Пример промта для клод код*.txt

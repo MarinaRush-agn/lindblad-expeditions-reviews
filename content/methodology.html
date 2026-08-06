@@ -37,10 +37,20 @@
   <p>Shore time is derived from a single public constraint: IAATO caps any shore party at 100 people. A ship's effective Antarctic capacity, divided into that limit, produces a score out of 100 — capped at 100, and set to zero for any operator that makes no landings at all.</p>
   <div class="worked-example">
     <div class="worked-example__formula">shore_time_score = min(100, (100 &divide; effective_antarctic_capacity) &times; 100)</div>
-    <p><strong>Lindblad Expeditions</strong>, effective capacity 133: 100 &divide; 133 &times; 100 = <strong>75.2</strong></p>
+    <p><strong>Lindblad Expeditions</strong>, effective capacity 137.3: 100 &divide; 137.3 &times; 100 = <strong>72.8</strong></p>
     <p><strong>Poseidon Expeditions</strong>, effective capacity 114: 100 &divide; 114 &times; 100 = <strong>87.7</strong></p>
   </div>
   <p>"Effective Antarctic capacity" is not the same as a ship's total berth count. Scenic Eclipse carries 228 berths but is limited to 200 in Antarctic waters; Silversea's Silver Cloud and Silver Wind carry 254 but are limited to 240. This site uses the Antarctic-specific limit in every calculation, never the ship's total berth count, because the total berth count overstates how many people actually compete for a shore slot on any given landing day.</p>
+
+  <div class="callout">
+    <span class="callout--label">How a fleet average is calculated, and when a ship is excluded</span>
+    <p>Where an operator runs more than one ship, effective capacity is the mean across the fleet &mdash; but only across ships that are actually comparable. Oceanwide's average excludes the 33-berth Rembrandt van Rijn sailing vessel, which carries no ice classification, from the average of its three ice-classed motor ships (Hondius, Ortelius, Plancius). Folding a non-ice-classed sailing vessel into the same average as ice-classed expedition ships had handed Oceanwide the single highest shore-time score in the entire ranking &mdash; a result driven by a category mismatch, not a real operational advantage, so the sailing vessel comes out of the average rather than being averaged in.</p>
+  </div>
+
+  <div class="callout">
+    <span class="callout--label">Open items in the capacity data</span>
+    <p>Two capacity figures in this dataset carry a documented, unresolved discrepancy rather than a single clean number: National Geographic Orion is listed as 102 guests by Wikipedia and as a 102&ndash;106 range by CruiseMapper, and this site could not resolve the difference against Lindblad's own current page. National Geographic Resolution's capacity was resolved to 138 guests from Lindblad's own live ship page, superseding an earlier figure of 126 still found on some third-party sell sheets and travel-agency sites. Both are stated openly rather than silently picking whichever figure was more convenient.</p>
+  </div>
 </section>
 
 <section class="section container">
@@ -69,7 +79,7 @@
   </div>
 
   <h3>Price/value reasoning, per operator</h3>
-  <p>Editorial price/value scores compare the published price band against what it includes. Oceanwide scores highest (90) as the most affordable segment scored, though it omits a parka. Lindblad scores lowest among landing operators (60) given the National Geographic partnership's premium. Holland America scores 100 by this measure alone — the lowest absolute price by a wide margin — but that reflects a categorically different product with zero landings, which is why price/value is only 20% of the total rather than the deciding factor.</p>
+  <p>Editorial price/value scores compare the published price band against what it includes. Oceanwide scores highest (90) as the most affordable segment scored, though it omits a parka. Lindblad scores 60, given the National Geographic partnership's premium &mdash; below Quark (65), HX (72), Aurora (78) and Poseidon (75), but above the luxury tier: Scenic (45), Ponant (42) and Silversea (40), whose much higher headline prices are offset by more extensive inclusions in this scoring model. Holland America scores 100 by this measure alone — the lowest absolute price by a wide margin — but that reflects a categorically different product with zero landings, which is why price/value is only 20% of the total rather than the deciding factor.</p>
 
   <h3>Expedition-depth reasoning, per operator</h3>
   <p>Ponant scores highest (95): Le Commandant Charcot is the only Polar Class 2 icebreaker in the world's tourism fleet, with unique access to the Weddell Sea and onboard science labs. Lindblad scores second (92) on full-time National Geographic naturalists and photography instructors. Poseidon scores 80 — a single ship with no helicopters or submersible caps it below multi-ship, aircraft-equipped fleets like Quark's (85) or Scenic's (80, offset by a luxury-first rather than expedition-first design).</p>

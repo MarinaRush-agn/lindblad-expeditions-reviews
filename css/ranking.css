@@ -1,4 +1,4 @@
-/* Antarctic Review Hub — ranking.css (homepage only) */
+/* Expedition Review Desk — ranking.css (homepage only) */
 
 .hero-banner {
   position: relative;
@@ -155,6 +155,71 @@
 }
 .shore-time-row .metric-bar { width: 140px; }
 .shore-time-row__val { font-weight: 600; font-feature-settings: 'tnum' 1; }
+
+/* Alternatives card grid (homepage) */
+.alt-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--warning-gold);
+  margin-bottom: 12px;
+}
+.alt-eyebrow__bar { display: inline-block; width: 20px; height: 3px; background: var(--warning-gold); border-radius: 2px; }
+.alt-block h2 { max-width: 30ch; }
+.alt-intro { max-width: 68ch; margin-bottom: 32px; }
+.alt-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .alt-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.alt-card {
+  background: var(--white);
+  border: 1px solid var(--outline);
+  border-radius: calc(var(--radius) * 3);
+  box-shadow: var(--shadow-floating);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.alt-card__title { margin-bottom: 10px; }
+.alt-card__intro { font-size: 15px; color: var(--text-muted); margin-bottom: 20px; }
+.alt-card__points { list-style: none; margin: 0 0 20px; padding: 0; flex-grow: 1; }
+.alt-card__points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 10px 0;
+  border-top: 1px solid var(--outline);
+}
+.alt-card__points li:first-child { border-top: none; padding-top: 0; }
+.alt-icon { flex-shrink: 0; width: 20px; height: 20px; margin-top: 1px; }
+.alt-icon svg { width: 100%; height: 100%; }
+.alt-icon--star, .alt-icon--pin, .alt-icon--grid { color: var(--arctic-teal); }
+.alt-icon--warn { color: var(--warning-gold); }
+.alt-card__trade { color: var(--text-muted); }
+.alt-card__link {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--warning-gold);
+  text-decoration: none;
+}
+.alt-card__link:hover { text-decoration: underline; }
+.alt-see-more {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--navy);
+}
 
 /* Close block */
 .close-block { text-align: center; padding: 40px 0; }
