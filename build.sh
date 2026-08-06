@@ -99,7 +99,7 @@ ORG_SCRIPT="<script type=\"application/ld+json\">{\"@context\":\"https://schema.
 # HOMEPAGE — Lindblad Expeditions brand-review hub (BUILD-SPEC v2 §5.1 / §8)
 # ---------------------------------------------------------------------------
 cat > "$TMPDIR/schema-home.html" <<EOF
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Lindblad Expeditions Reviews 2026: Ratings, Ships and Complaints Across Every Destination","description":"Lindblad Expeditions scores on Cruise Critic, Travelstride and Trustpilot, plus which ships, destinations and complaints the reviews actually cover.","url":"${BASE_URL}/","dateModified":"{{DATE}}"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Lindblad Expeditions Reviews 2026: Ratings, Ships and Complaints Across Every Destination","description":"Lindblad Expeditions scores on Cruise Critic, TripAdvisor, Travelstride and Trustpilot, plus which ships, destinations and complaints the reviews actually cover.","url":"${BASE_URL}/","dateModified":"{{DATE}}"}</script>
 ${ORG_SCRIPT}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -113,8 +113,8 @@ ${ORG_SCRIPT}
 EOF
 
 assemble "index.html" "0" \
-  "Lindblad Expeditions Reviews 2026: 3 Verified Ratings" \
-  "Lindblad Expeditions scores on Cruise Critic, Travelstride and Trustpilot, plus which ships, destinations and complaints the reviews actually cover." \
+  "Lindblad Expeditions Reviews 2026: 4 Verified Ratings" \
+  "Lindblad Expeditions scores on Cruise Critic, TripAdvisor, Travelstride and Trustpilot, plus which ships, destinations and complaints the reviews actually cover." \
   "content/main-lindblad.html" "css/ranking.css" "$TMPDIR/schema-home.html" "website" "${BASE_URL}/"
 
 # ---------------------------------------------------------------------------
@@ -411,6 +411,29 @@ assemble "contact/index.html" "1" "Contact | Expedition Review Desk" "How to rea
 
 eeat_schema "privacy-and-cookies" "Privacy & Cookies | Expedition Review Desk" "What Expedition Review Desk collects, what analytics run, and how cookies are handled on this site."
 assemble "privacy-and-cookies/index.html" "1" "Privacy & Cookies | Expedition Review Desk" "What Expedition Review Desk collects, what analytics run, and how cookies are handled on this site." "content/privacy-and-cookies.html" "css/page.css" "$TMPDIR/schema-eeat-privacy-and-cookies.html" "article" "${BASE_URL}/privacy-and-cookies/"
+
+# ---------------------------------------------------------------------------
+# REDIRECT STUB — /operators/lindblad-expeditions/ was deleted (§5.2); Lindblad
+# now lives at "/". Static host, no server-side 301 available, so this is a
+# meta-refresh + canonical stub instead of a dead link or a silent 404.
+# ---------------------------------------------------------------------------
+mkdir -p operators/lindblad-expeditions
+cat > operators/lindblad-expeditions/index.html <<EOF
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="0; url=${BASE_URL}/">
+<link rel="canonical" href="${BASE_URL}/">
+<meta name="robots" content="${ROBOTS_META}">
+<title>Moved | Expedition Review Desk</title>
+</head>
+<body>
+<p>This page has moved to <a href="${BASE_URL}/">the Lindblad Expeditions review</a>.</p>
+</body>
+</html>
+EOF
+echo "Built: operators/lindblad-expeditions/index.html (redirect stub)"
 
 # ---------------------------------------------------------------------------
 # 404

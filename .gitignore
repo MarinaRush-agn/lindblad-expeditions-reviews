@@ -8,5 +8,6 @@ node_modules/
 .claude/
 lindblad-reviews-BUILD-SPEC.md
 lindblad-reviews-BUILD-SPEC-v2.md
+TASKS-lindblad-homepage.md
 settings.json
 Пример промта для клод код*.txt

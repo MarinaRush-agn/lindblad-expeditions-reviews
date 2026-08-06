@@ -50,13 +50,9 @@
 .scorecard-note {
   font-size: 14px;
   color: var(--text-muted);
-  max-width: 72ch;
   margin-top: 16px;
 }
 
-/* Text blocks that sit directly above/below a full-width table should span
-   the table's width instead of wrapping at the global 68ch paragraph limit. */
-.text-wide { max-width: none; }
 table.data-table th:nth-child(5), table.data-table td:nth-child(5) { min-width: 150px; }
 .landing-style-tag {
   display: inline-flex;
@@ -107,35 +103,76 @@ table.data-table th:nth-child(5), table.data-table td:nth-child(5) { min-width: 
   color: var(--navy);
 }
 
-/* Operator scorecard blocks */
+/* Operator scorecard blocks — elevated card, same language as .alt-card / .ship-card */
 .operator-block {
-  border-top: 1px solid var(--outline);
-  padding: 32px 0;
+  background: var(--white);
+  border: 1px solid var(--outline);
+  border-radius: calc(var(--radius) * 3);
+  box-shadow: var(--shadow-floating);
+  padding: 28px 28px 32px;
+  margin-bottom: 24px;
 }
 .operator-block__head {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 14px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 .operator-block__head h3 { margin-bottom: 0; }
-.operator-block__ship {
-  height: 36px;
-  width: auto;
+.operator-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
-  opacity: 0.85;
+  border-radius: 50%;
+  background: var(--soft-slate);
+  color: var(--arctic-teal);
+}
+.operator-icon-badge svg { width: 20px; height: 20px; }
+.operator-block--first .operator-icon-badge {
+  background: var(--warning-gold-10);
+  color: var(--warning-gold);
 }
 .operator-block__rank {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: 14px;
-  color: var(--text-muted);
+  color: var(--navy);
+  background: var(--soft-slate);
+  border: 1px solid var(--outline);
+  border-radius: 999px;
+  padding: 5px 14px;
   margin-left: auto;
+  white-space: nowrap;
+}
+.operator-block--first .operator-block__rank {
+  background: var(--warning-gold-10);
+  border-color: var(--warning-gold);
+  color: var(--warning-gold);
 }
 .operator-fleet-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 14px;
   color: var(--text-muted);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+}
+.operator-fleet-line::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  background-color: var(--arctic-teal);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22V8'/%3E%3Cpath d='M5 12H2a10 10 0 0 0 20 0h-3'/%3E%3Ccircle cx='12' cy='5' r='3'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22V8'/%3E%3Cpath d='M5 12H2a10 10 0 0 0 20 0h-3'/%3E%3Ccircle cx='12' cy='5' r='3'/%3E%3C/svg%3E");
 }
 /* Praise/complain category grid */
 .category-grid {
@@ -180,7 +217,7 @@ table.data-table th:nth-child(5), table.data-table td:nth-child(5) { min-width: 
 }
 .alt-eyebrow__bar { display: inline-block; width: 20px; height: 3px; background: var(--warning-gold); border-radius: 2px; }
 .alt-block h2 { max-width: 30ch; }
-.alt-intro { max-width: 68ch; margin-bottom: 32px; }
+.alt-intro { margin-bottom: 32px; }
 .alt-grid {
   display: grid;
   grid-template-columns: 1fr;
