@@ -123,5 +123,7 @@
   padding: 8px 14px;
   font-size: 14px;
   font-weight: 500;
+  color: var(--navy);
+  text-decoration: none;
 }
 .related-operators a:hover { background: var(--soft-slate); }
