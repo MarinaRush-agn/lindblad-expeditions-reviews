@@ -6,12 +6,6 @@ btn?.addEventListener('click', () => {
   nav.classList.toggle('is-open');
 });
 
-document.querySelector('.nav-dropdown__menu')?.addEventListener('click', (e) => {
-  if (e.target.tagName === 'A') {
-    e.target.closest('details')?.removeAttribute('open');
-  }
-});
-
 // Mouse users expect this dropdown to open on hover, not just on click —
 // use the real [open] attribute so native <details> behaviour stays correct
 // for keyboard/touch. Gated on (hover: hover) so touch taps aren't affected.
