@@ -163,7 +163,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* Operator Reviews dropdown */
-.nav-dropdown { position: relative; padding-bottom: 10px; }
+.nav-dropdown { position: relative; }
 .nav-dropdown details {
   position: relative;
   border: none;
@@ -216,7 +216,7 @@ p:last-child { margin-bottom: 0; }
   margin-top: 4px;
 }
 @media (min-width: 768px) {
-  .nav-dropdown__menu { position: absolute; top: 100%; left: 0; z-index: 60; }
+  .nav-dropdown__menu { position: absolute; top: 100%; left: 0; margin-top: 0; z-index: 60; }
 }
 .nav-dropdown__menu a {
   padding: 8px 12px;
